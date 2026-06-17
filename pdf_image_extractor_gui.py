@@ -24,7 +24,12 @@ class PDFImageExtractor:
     def __init__(self, root):
         self.root = root
         self.root.title("PDF 图片提取压缩工具")
-        self.root.geometry("560x480")
+        # 启动时窗口大小为屏幕的 40%
+        screen_w = self.root.winfo_screenwidth()
+        screen_h = self.root.winfo_screenheight()
+        win_w = int(screen_w * 0.4)
+        win_h = int(screen_h * 0.4)
+        self.root.geometry(f"{win_w}x{win_h}")
         self.root.resizable(True, True)
         self.root.minsize(500, 400)
         
