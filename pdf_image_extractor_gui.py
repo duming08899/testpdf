@@ -24,8 +24,9 @@ class PDFImageExtractor:
     def __init__(self, root):
         self.root = root
         self.root.title("PDF 图片提取压缩工具")
-        self.root.geometry("500x420")
-        self.root.resizable(False, False)
+        self.root.geometry("560x480")
+        self.root.resizable(True, True)
+        self.root.minsize(500, 400)
         
         # 变量
         self.input_path = tk.StringVar()
