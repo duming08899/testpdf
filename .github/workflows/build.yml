@@ -15,10 +15,10 @@ jobs:
 
     steps:
       - name: 检出代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: 安装 Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -54,14 +54,14 @@ jobs:
 
       - name: 上传 macOS 产物
         if: runner.os == 'macOS'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: PDF图片提取工具_macOS
           path: PDF图片提取工具_macOS.zip
 
       - name: 上传 Windows 产物
         if: runner.os == 'Windows'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: PDF图片提取工具_Windows
           path: PDF图片提取工具_Windows.exe
